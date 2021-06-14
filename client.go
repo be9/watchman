@@ -58,8 +58,9 @@ func (c *Client) AddWatch(path string) (*Watch, error) {
 
 	res := protocol.NewWatchProjectResponse(pdu)
 	w := &Watch{
-		client: c,
-		root:   res.Watch(),
+		client:       c,
+		root:         res.Watch(),
+		relativePath: res.RelativePath(),
 	}
 	return w, nil
 }

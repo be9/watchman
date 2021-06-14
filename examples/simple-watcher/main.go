@@ -139,7 +139,7 @@ func main() {
 		}
 	}()
 
-	if _, err = watch.Subscribe("example", dir); err != nil {
+	if _, err = watch.Subscribe("example"); err != nil {
 		die(err)
 	}
 

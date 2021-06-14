@@ -4,9 +4,10 @@ import "github.com/sjansen/watchman/protocol"
 
 // A Subscription represents a request to receive notification of changes to a watched root.
 type Subscription struct {
-	client *Client
-	name   string
-	root   string
+	client       *Client
+	name         string
+	root         string
+	relativeRoot string
 }
 
 // Unsubscribe cancels a subscription.

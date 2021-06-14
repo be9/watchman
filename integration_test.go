@@ -147,7 +147,7 @@ func TestClient(t *testing.T) {
 	require.NotEmpty(roots)
 
 	// subscribe
-	s, err := watch.Subscribe("Spoon!", dir)
+	s, err := watch.Subscribe("Spoon!")
 	require.NoError(err)
 
 	n = len(collect(updates))
